@@ -51,7 +51,7 @@ return(
     />
     <List/>
   </div>
-  <div></div>
+
  </div>
 )
 }
