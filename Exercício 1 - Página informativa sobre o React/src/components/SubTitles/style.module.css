@@ -1,0 +1,8 @@
+.subtitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56vh;
+    border-top: solid 2px cyan;
+    padding: 1vh;
+}

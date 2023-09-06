@@ -1,21 +1,16 @@
-import Photo from "./components/Photo"
-import ImageMimikyu from "./assets/mimikyu.png"
-import Style from "./App.module.css"
-import Name from "./components/Name"
-import Description from "./components/Description"
-import Button from "./components/Button"
+import image from "./assets/mimikyu.png"
+import Profile from "./components/Profile"
+
 function App(){
   return(
-    <div className={Style.profile}>
-      <Photo imageSrc={ImageMimikyu}/>
-      <Name name="Mimikyu"/>
-      <Description description="Fantasma / Fada"/>
-      <Description description="Ilha Ula'Ula"/>
-      <Description description="Thrifty Megamart"/>
-      <Button button="Pokedex"/>
-      <Button button="Buldapedia"/>
-      <Button button="Nitendo"/>
-    </div>
+    <>
+      <Profile 
+        image={image} description1="Fantasma/Fada" 
+        description2="Ilha Ula's Ula's" description3="Alola"
+        name="Mimikyu" button1="Pokemon company" button2="Pokedex" button3="Saiba Mais"
+      />
+
+    </>
 
   )
 }

@@ -1,0 +1,7 @@
+.button button{
+    padding: 0.5vh 1vh;
+    background-color: transparent;
+    border: solid 1px cyan;
+    border-radius: 10px;
+    color: cyan;
+}
