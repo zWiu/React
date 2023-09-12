@@ -7,7 +7,7 @@ TextInput.propTypes = {
     cod: PropTypes.string
 
 }
-
+//Definindo argumetnos do TextInput com os valores em chaves
 export default function TextInput({ value, setValue, content, cod }) {
 
     return (
