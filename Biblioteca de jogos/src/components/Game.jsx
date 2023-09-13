@@ -5,7 +5,7 @@ Game.propTypes = {
   cover: PropTypes.string,
   onRemove: PropTypes.func
 }
-
+//Destruturando os argumentos enviando para o Game
 export default function Game({ title, cover, onRemove }) {
 
   return (

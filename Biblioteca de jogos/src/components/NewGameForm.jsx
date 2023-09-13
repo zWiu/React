@@ -5,7 +5,7 @@ import TextInput from "./TextInput"
 NewGameForm.propTypes = {
     addGame: PropTypes.func
 }
-
+// Destruturando o argumnento enviado para o NewGameForm
 export default function NewGameForm({ addGame }) {
     //Declarando componente do título do jogo
     const [title, setTitle] = useState("")
@@ -24,6 +24,7 @@ export default function NewGameForm({ addGame }) {
     }
     return (
         <div>
+            {/* O formulário será enviado quando o botão for apertado e irá executar a função (handleSubmit) */}
             <form onSubmit={handleSubmit}>
                 <div>
                     {/* Caixa pedidno o título do jogo */}
