@@ -1,0 +1,15 @@
+.form form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+    font-size: 2.5vh;
+    padding: 2vh;
+    border-bottom: 1px solid black;
+}
+.form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    font-size: 2vh;
+}

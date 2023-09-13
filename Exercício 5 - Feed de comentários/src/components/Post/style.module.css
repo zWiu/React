@@ -1,0 +1,11 @@
+.post{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60vh;
+    gap: 1vh;
+    margin-bottom: 2vh;
+}
+.email{
+    font-weight: bolder;
+}
