@@ -6,7 +6,8 @@ import PropTypes from 'prop-types'
 
 Post.proptypes = {
     email: PropTypes.string,
-    coment: PropTypes.string
+    coment: PropTypes.string,
+    date: PropTypes.string
 }
 
 export default function Post({ email, coment, date}) {
