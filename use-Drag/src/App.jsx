@@ -1,8 +1,9 @@
 import { useState } from 'react'
+import {animated} from 'react-spring'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { useDrag } from '@use-gesture/react'
+import useCtrlObj from './hooks/useCtrlObj'
 
 function App() {
 
@@ -10,24 +11,20 @@ function App() {
 
   const [logoPos, setLogoPos] = useState({ x: 0, y: 0 })
 
-  const moveLogo = useDrag((params) => {
-    setLogoPos({
-      x: params.offset[0],
-      y: params.offset[1],
-    })
-  })
+  const {moveObj, Pos} = useCtrlObj(setLogoPos)
 
   return (
     <>
-      <div
+      <animated.div
+      {...moveObj()}
+      style={{
+        x: Pos.x,
+        y: Pos.y
+      }}
       >
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-          <img 
-          src={reactLogo} 
-          className="logo react" 
-          alt="React logo" 
-          />
-      </div>
+          <img src={viteLogo} className="logo" />
+          <img src={reactLogo} className="logo react" />
+      </animated.div>
       <h1>Vite + React</h1>
       <div className="card"
       >
@@ -38,15 +35,17 @@ function App() {
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs"
-      {...moveLogo()} 
-      style={{
-        position: 'relative',
-        top: logoPos.y,
-        left: logoPos.x,
-      }}>
+      <animated.div 
+        {...moveObj()}
+        style={{
+          x: Pos.x,
+          y: Pos.y
+        }}
+      >
+      <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      </animated.div>
     </>
   )
 }
