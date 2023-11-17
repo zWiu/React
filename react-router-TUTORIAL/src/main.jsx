@@ -18,6 +18,10 @@ import EditContact,{
 
 import {  createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import { action as destroyAction} from './routes/destroy'
+
+import Index from './routes/index'
+
 import './index.css';
   // Criando uma página para rotear o html Hello Word!
   const router = createBrowserRouter([
@@ -34,6 +38,8 @@ import './index.css';
       action: rootAction,
       //Definindo um caminho filho
       children: [
+        //Definindo o caminho padrão do componente
+        {index: true, element: <Index />},
         {
           path: "/contacts/:contactId",
           element: <Contact/>,
@@ -44,6 +50,11 @@ import './index.css';
           element: <EditContact/>,
           loader: contactLoader,
           action: editAction,
+        },
+        {
+          path: "/contacts/:contactId/destroy",
+          action: destroyAction,
+          errorElement: <div>Oops! There was an error.</div>,
         }
       ]
     },
